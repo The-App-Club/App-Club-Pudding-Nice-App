@@ -1,0 +1,42 @@
+{
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "serve": "vite preview",
+    "format": "prettier --write \"{,!(node_modules|dist|build)/**/}*.*\"",
+    "lint": "stylelint --fix \"{,!(node_modules|dist|build)/**/}*.css*\" \"{,!(node_modules|dist|build)/**/}*.scss*\"",
+    "download-year-pages": "node -r esm scripts/download-year-pages.js",
+    "parse-year-pages": "node -r esm scripts/parse-year-pages.js",
+    "get-wiki-pageviews": "node -r esm scripts/get-wiki-pageviews.js",
+    "get-people-pageviews": "node -r esm scripts/get-people-pageviews.js",
+    "bin": "node -r esm scripts/bin.js",
+    "stats": "node -r esm scripts/stats.js; nkf -w8 --overwrite output/people--stats.csv",
+    "filter-population": "node -r esm scripts/filter-population.js",
+    "add-details": "node -r esm scripts/add-details.js;  nkf -w8 --overwrite output/people--details.csv",
+    "prepare-explore": "node -r esm scripts/prepare-explore.js",
+    "prepare-web": "node -r esm  scripts/prepare-web.js",
+    "reproduce": "npm-run-all -s download-year-pages parse-year-pages get-wiki-pageviews get-people-pageviews bin stats filter-population add-details prepare-explore prepare-web"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^9.0.2",
+    "stylelint-config-recommended-scss": "^4.3.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.21.0",
+    "vite": "^2.3.0"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0-rc.2",
+    "d3": "5.5.0",
+    "dayjs": "^1.10.8",
+    "mkdirp": "0.5.1",
+    "moving-averages": "4.0.5",
+    "pageviews": "1.4.0",
+    "request": "2.87.0",
+    "simple-statistics": "6.1.0",
+    "wikijs": "^4.8.0"
+  }
+}

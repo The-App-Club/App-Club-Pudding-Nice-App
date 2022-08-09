@@ -1,0 +1,3 @@
+- Ref
+  - [github repo](https://github.com/venkatesannaveen/medium-articles)
+  - [blog](https://towardsdatascience.com/an-introduction-to-making-dynamic-and-interactive-plots-with-d3-a9e859413c5a)

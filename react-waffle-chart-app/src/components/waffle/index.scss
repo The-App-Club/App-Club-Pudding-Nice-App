@@ -1,0 +1,17 @@
+.hist {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5rem;
+}
+
+.block {
+  width: 20px;
+  height: 20px;
+  background-color: #fe4a49;
+}

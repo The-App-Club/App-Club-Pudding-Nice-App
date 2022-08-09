@@ -1,0 +1,6 @@
+*ico
+.eslintignore
+.gitignore
+.prettierignore
+.stylelintignore
+yarn.lock
